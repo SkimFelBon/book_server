@@ -1,0 +1,23 @@
+https://community.c9.io/t/setting-up-postgresql/1573
+
+Start the PostgreSQL service
+sudo service postgresql start
+
+Connect to the service
+psql
+
+to execute code run
+python app.py
+or
+FLASK_APP=app.py flask run
+
+
+sudo -u postgres createuser --superuser Skim
+cut -d: -f1 /etc/passwd
+sudo useradd Skim
+
+sudo -u Skim createdb super_new_db
+
+psql -U Skim -d super_new_db
+psql: FATAL:  Peer authentication failed for user "Skim"
+psql user_name  -h 127.0.0.1 -d db_name
